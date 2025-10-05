@@ -108,11 +108,27 @@ body {
     margin: 0 auto;
 }
 
-.hero-logo {
-    width: 180px;
-    height: auto;
+.hero-logo-container {
+    display: inline-block;
+    padding: 40px;
+    background: linear-gradient(135deg, var(--snow) 0%, var(--ice) 100%);
+    border-radius: 32px 8px 32px 8px;
     margin-bottom: 48px;
-    filter: drop-shadow(0 4px 12px rgba(74, 144, 226, 0.15));
+    box-shadow: 0 8px 24px rgba(74, 144, 226, 0.1);
+    border: 2px solid var(--frost);
+    transition: all 0.3s ease;
+}
+
+.hero-logo-container:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(74, 144, 226, 0.15);
+    border-color: var(--blue-light);
+}
+
+.hero-logo {
+    width: 160px;
+    height: auto;
+    display: block;
 }
 
 .hero-title {
