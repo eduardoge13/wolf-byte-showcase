@@ -3,448 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Wolf-Byte - Soluciones de IA de Próxima Generación">
-    <title>Wolf-Byte | Soluciones de IA de Próxima Generación</title>
+    <meta name="description" content="Wolf-Byte - Soluciones de Inteligencia Artificial">
+    <title>Wolf-Byte | AI Solutions</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <!-- Header / Navigation -->
+    <!-- Header -->
     <header class="header">
-        <nav class="navbar">
-            <div class="container">
+        <div class="container">
+            <nav class="nav">
                 <div class="nav-brand">
-                    <img src="assets/img/wolf-byte-logo.png" alt="Wolf-Byte Logo" class="logo">
-                    <h1 class="brand-name">WOLF BYTE</h1>
+                    <img src="assets/img/wolf-byte-logo.png" alt="Wolf-Byte" class="nav-logo">
+                    <span class="brand-text">WOLF BYTE</span>
                 </div>
-                <ul class="nav-menu">
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#soluciones">Paquetes</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-                <button class="menu-toggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </nav>
+                <a href="#packages" class="nav-link">Paquetes</a>
+            </nav>
+        </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="inicio" class="hero">
-        <div class="hero-overlay"></div>
-        <div class="snow"></div>
-        <div class="container hero-content">
-            <div class="hero-logo-container">
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
                 <img src="assets/img/wolf-byte-logo.png" alt="Wolf-Byte" class="hero-logo">
-            </div>
-            <h1 class="hero-title">
-                <span class="title-main">WOLF BYTE</span>
-                <span class="title-subtitle">Artificial Intelligence Solutions</span>
-            </h1>
-            <p class="hero-tagline">
-                Soluciones de IA para empresas modernas
-            </p>
-            <div class="hero-description">
-                <p>Transforma tu negocio con inteligencia artificial de nueva generación</p>
-            </div>
-            <a href="#soluciones" class="cta-button">Descubre Nuestras Soluciones</a>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">¿Por qué Wolf-Byte?</h2>
-                <p class="section-subtitle">IA que transforma tu negocio</p>
-            </div>
-            <div class="about-grid">
-                <div class="about-card">
-                    <div class="card-icon">🤖</div>
-                    <h3>IA Avanzada</h3>
-                    <p>Modelos de última generación para automatizar y optimizar tu negocio.</p>
-                </div>
-                <div class="about-card">
-                    <div class="card-icon">⚡</div>
-                    <h3>Resultados Rápidos</h3>
-                    <p>Implementación ágil con impacto medible desde el día uno.</p>
-                </div>
-                <div class="about-card">
-                    <div class="card-icon">🎯</div>
-                    <h3>ROI Garantizado</h3>
-                    <p>Soluciones diseñadas para generar retorno de inversión comprobado.</p>
-                </div>
+                <h1 class="hero-title">Soluciones de Inteligencia Artificial</h1>
+                <p class="hero-subtitle">Transformamos tu negocio con IA de última generación</p>
             </div>
         </div>
     </section>
 
-    <!-- Solutions Section -->
-    <section id="soluciones" class="solutions">
+    <!-- Packages Section -->
+    <section id="packages" class="packages">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Nuestros Paquetes</h2>
-                <p class="section-subtitle">Elige la solución perfecta para tu empresa</p>
-            </div>
-
-            <!-- Solution 1: Wolf Package - Data Analysis -->
-            <div class="solution-card" data-house="stark">
-                <div class="solution-header">
-                    <div class="house-sigil">�</div>
-                    <h3 class="solution-title">Wolf Package</h3>
-                    <p class="house-words">Análisis de Datos & Business Intelligence</p>
+            <h2 class="section-title">Nuestros Paquetes</h2>
+            
+            <div class="packages-grid">
+                <!-- Wolf Package -->
+                <div class="package-card">
+                    <div class="package-icon">🐺</div>
+                    <h3 class="package-title">Wolf Package</h3>
+                    <p class="package-description">Análisis de Datos & Business Intelligence</p>
+                    <ul class="package-features">
+                        <li>Análisis exploratorio de datos</li>
+                        <li>Modelos predictivos</li>
+                        <li>Dashboards interactivos</li>
+                        <li>Forecasting avanzado</li>
+                    </ul>
                 </div>
-                <div class="solution-content">
-                    <div class="solution-description">
-                        <h4>Inteligencia de Datos Empresarial</h4>
-                        <p>Transforma tus datos en ventaja competitiva con análisis avanzado y proyecciones precisas.</p>
-                        
-                        <ul class="feature-list">
-                            <li>
-                                <span class="feature-icon">�</span>
-                                <div>
-                                    <strong>Análisis Exploratorio</strong>
-                                    <p>Descubre patrones y tendencias ocultas en tus datos</p>
-                                </div>
-                            </li>
-                            <li>
-                                <span class="feature-icon">📈</span>
-                                <div>
-                                    <strong>Modelos Predictivos</strong>
-                                    <p>Forecasting de ventas, demanda y tendencias</p>
-                                </div>
-                            </li>
-                            <li>
-                                <span class="feature-icon">📉</span>
-                                <div>
-                                    <strong>Dashboards BI</strong>
-                                    <p>Visualizaciones interactivas en tiempo real</p>
-                                </div>
-                            </li>
-                            <li>
-                                <span class="feature-icon">⚡</span>
-                                <div>
-                                    <strong>Optimización</strong>
-                                    <p>Identifica oportunidades de mejora continua</p>
-                                </div>
-                            </li>
-                        </ul>
 
-                        <div class="use-cases">
-                            <h5>Casos de Uso:</h5>
-                            <div class="tags">
-                                <span class="tag">Sales Analytics</span>
-                                <span class="tag">Forecasting</span>
-                                <span class="tag">Customer Segmentation</span>
-                                <span class="tag">KPI Dashboards</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="solution-demo">
-                        <div class="demo-window">
-                            <div class="demo-header">
-                                <span class="demo-dot"></span>
-                                <span class="demo-dot"></span>
-                                <span class="demo-dot"></span>
-                                <span class="demo-title">Análisis en Acción</span>
-                            </div>
-                            <div class="demo-content">
-                                <div class="stats-grid">
-                                    <div class="stat-card">
-                                        <div class="stat-value">+127%</div>
-                                        <div class="stat-label">ROI Promedio</div>
-                                    </div>
-                                    <div class="stat-card">
-                                        <div class="stat-value">95%</div>
-                                        <div class="stat-label">Precisión</div>
-                                    </div>
-                                    <div class="stat-card">
-                                        <div class="stat-value">-40%</div>
-                                        <div class="stat-label">Tiempo de Análisis</div>
-                                    </div>
-                                </div>
-                                <div class="chart-placeholder">
-                                    <canvas id="chart1"></canvas>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <!-- Lion Package -->
+                <div class="package-card">
+                    <div class="package-icon">🦁</div>
+                    <h3 class="package-title">Lion Package</h3>
+                    <p class="package-description">Chatbots Inteligentes Multicanal</p>
+                    <ul class="package-features">
+                        <li>Soporte 24/7 automatizado</li>
+                        <li>Integración WhatsApp/Telegram</li>
+                        <li>Consultas a bases de datos</li>
+                        <li>Personalización completa</li>
+                    </ul>
+                </div>
+
+                <!-- Dragon Package -->
+                <div class="package-card">
+                    <div class="package-icon">🐲</div>
+                    <h3 class="package-title">Dragon Package</h3>
+                    <p class="package-description">Agentes de IA con Lenguaje Natural</p>
+                    <ul class="package-features">
+                        <li>Procesamiento de lenguaje natural</li>
+                        <li>Conversaciones inteligentes</li>
+                        <li>Integración con sistemas</li>
+                        <li>Multilenguaje</li>
+                    </ul>
                 </div>
             </div>
-
-            <!-- Solution 2: Lion Package - Chatbot -->
-            <div class="solution-card" data-house="lannister">
-                <div class="solution-header">
-                    <div class="house-sigil">�</div>
-                    <h3 class="solution-title">Lion Package</h3>
-                    <p class="house-words">Chatbots Inteligentes Multicanal</p>
-                </div>
-                <div class="solution-content">
-                    <div class="solution-description">
-                        <h4>Automatización de Conversaciones</h4>
-                        <p>Chatbots potenciados con IA para atención al cliente 24/7 en múltiples plataformas.</p>
-                        
-                        <ul class="feature-list">
-                            <li>
-                                <span class="feature-icon">💬</span>
-                                <div>
-                                    <strong>Soporte Automatizado</strong>
-                                    <p>Respuestas instantáneas y precisas</p>
-                                </div>
-                            </li>
-                            <li>
-                                <span class="feature-icon">🔍</span>
-                                <div>
-                                    <strong>Consultas Inteligentes</strong>
-                                    <p>Acceso a bases de datos y sistemas</p>
-                                </div>
-                            </li>
-                            <li>
-                                <span class="feature-icon">�</span>
-                                <div>
-                                    <strong>Multicanal</strong>
-                                    <p>WhatsApp, Telegram, Web, Facebook</p>
-                                </div>
-                            </li>
-                            <li>
-                                <span class="feature-icon">🎓</span>
-                                <div>
-                                    <strong>Personalizable</strong>
-                                    <p>Entrenado específicamente para tu negocio</p>
-                                </div>
-                            </li>
-                        </ul>
-
-                        <div class="use-cases">
-                            <h5>Casos de Uso:</h5>
-                            <div class="tags">
-                                <span class="tag">Customer Support</span>
-                                <span class="tag">Lead Qualification</span>
-                                <span class="tag">FAQ Automation</span>
-                                <span class="tag">Appointment Booking</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="solution-demo">
-                        <div class="demo-window">
-                            <div class="demo-header">
-                                <span class="demo-dot"></span>
-                                <span class="demo-dot"></span>
-                                <span class="demo-dot"></span>
-                                <span class="demo-title">Chat Demo - Cliente 12345</span>
-                            </div>
-                            <div class="demo-content chat-demo">
-                                <div class="chat-message bot">
-                                    <div class="message-bubble">
-                                        👋 ¡Hola! Soy el asistente de Wolf-Byte. ¿En qué puedo ayudarte?
-                                    </div>
-                                </div>
-                                <div class="chat-message user">
-                                    <div class="message-bubble">
-                                        Busca el cliente 12345
-                                    </div>
-                                </div>
-                                <div class="chat-message bot">
-                                    <div class="message-bubble">
-                                        ✅ <strong>Cliente encontrado: 12345</strong><br><br>
-                                        📞 <strong>Teléfono:</strong> +52 555-1234<br>
-                                        👤 <strong>Nombre:</strong> Juan Pérez<br>
-                                        ✉️ <strong>Email:</strong> juan@ejemplo.com<br>
-                                        📊 <strong>Estado:</strong> Activo
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Solution 3: AI Chat Agent -->
-            <!-- Solution 3: Dragon Package - AI Agents -->
-            <div class="solution-card" data-house="targaryen">
-                <div class="solution-header">
-                    <div class="house-sigil">�</div>
-                    <h3 class="solution-title">Dragon Package</h3>
-                    <p class="house-words">Agentes de IA con Lenguaje Natural</p>
-                </div>
-                <div class="solution-content">
-                    <div class="solution-description">
-                        <h4>Inteligencia Conversacional Avanzada</h4>
-                        <p>Agentes de IA con comprensión de lenguaje natural para interacciones humanas genuinas.</p>
-                        
-                        <ul class="feature-list">
-                            <li>
-                                <span class="feature-icon">🧠</span>
-                                <div>
-                                    <strong>NLP Avanzado</strong>
-                                    <p>Comprende contexto, intención y matices</p>
-                                </div>
-                            </li>
-                            <li>
-                                <span class="feature-icon">🎭</span>
-                                <div>
-                                    <strong>Personalidad Custom</strong>
-                                    <p>Tono y estilo adaptado a tu marca</p>
-                                </div>
-                            </li>
-                            <li>
-                                <span class="feature-icon">🌐</span>
-                                <div>
-                                    <strong>Multilenguaje</strong>
-                                    <p>Español, inglés y más idiomas</p>
-                                </div>
-                            </li>
-                            <li>
-                                <span class="feature-icon">🔗</span>
-                                <div>
-                                    <strong>Integración API</strong>
-                                    <p>Conecta con tus sistemas existentes</p>
-                                </div>
-                            </li>
-                        </ul>
-
-                        <div class="use-cases">
-                            <h5>Casos de Uso:</h5>
-                            <div class="tags">
-                                <span class="tag">Virtual Assistant</span>
-                                <span class="tag">Sales Agent</span>
-                                <span class="tag">Tech Support</span>
-                                <span class="tag">GPT Integration</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="solution-demo">
-                        <div class="demo-window">
-                            <div class="demo-header">
-                                <span class="demo-dot"></span>
-                                <span class="demo-dot"></span>
-                                <span class="demo-dot"></span>
-                                <span class="demo-title">AI Agent - Conversación Natural</span>
-                            </div>
-                            <div class="demo-content chat-demo">
-                                <div class="chat-message bot">
-                                    <div class="message-bubble">
-                                        � Hola! Soy tu agente de IA. ¿En qué puedo ayudarte hoy?
-                                    </div>
-                                </div>
-                                <div class="chat-message user">
-                                    <div class="message-bubble">
-                                        ¿Qué soluciones recomiendas para mi empresa?
-                                    </div>
-                                </div>
-                                <div class="chat-message bot">
-                                    <div class="message-bubble">
-                                        Con gusto te ayudo. Basándome en tu industria y necesidades, recomiendo nuestro Wolf Package para análisis de datos o Lion Package para automatización de atención al cliente. ¿Te gustaría conocer más detalles?
-                                    </div>
-                                </div>
-                                <div class="chat-message bot">
-                                    <div class="message-bubble">
-                                        Basándome en el análisis de tus datos históricos y tendencias actuales, te recomiendo:<br><br>
-                                        1️⃣ <strong>Producto A</strong> - Tendencia +45% último mes<br>
-                                        2️⃣ <strong>Producto C</strong> - Alta demanda en Q4<br>
-                                        3️⃣ <strong>Bundle B+D</strong> - 30% más conversión<br><br>
-                                        ¿Quieres que genere un forecast detallado?
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <h2>¿Listo para Transformar tu Negocio?</h2>
-            <p>Agenda una consulta gratuita con nuestro equipo</p>
-            <a href="#contacto" class="cta-button-secondary">Contáctanos</a>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contacto" class="contact">
+    <section class="contact">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Contáctanos</h2>
-                <p class="section-subtitle">Cuéntanos sobre tu proyecto</p>
-            </div>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <div class="info-card">
-                        <div class="info-icon">📧</div>
-                        <h4>Email</h4>
-                        <p>contacto@wolf-byte.com</p>
-                    </div>
-                    <div class="info-card">
-                        <div class="info-icon">💬</div>
-                        <h4>WhatsApp</h4>
-                        <p>+52 1 555-WOLF (9653)</p>
-                    </div>
-                    <div class="info-card">
-                        <div class="info-icon">🌐</div>
-                        <h4>Telegram</h4>
-                        <p>@WolfByteBot</p>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <input type="text" placeholder="Nombre" required>
-                        <input type="email" placeholder="Email" required>
-                        <input type="text" placeholder="Empresa">
-                        <select>
-                            <option value="">Solución de Interés</option>
-                            <option value="data">Análisis de Datos</option>
-                            <option value="chatbot">Chatbot</option>
-                            <option value="ai-agent">Agente de IA</option>
-                            <option value="all">Todas las soluciones</option>
-                        </select>
-                        <textarea placeholder="Cuéntanos sobre tu proyecto" rows="4"></textarea>
-                        <button type="submit" class="submit-button">Enviar Mensaje</button>
-                    </form>
-                </div>
-            </div>
+            <h2 class="section-title">Contáctanos</h2>
+            <p class="contact-text">¿Listo para transformar tu negocio con IA?</p>
+            <a href="mailto:contacto@wolf-byte.com" class="contact-button">Escríbenos</a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h3>WOLF BYTE</h3>
-                    <p>AI Solutions for Modern Business</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Paquetes</h4>
-                    <ul>
-                        <li><a href="#soluciones">Wolf Package</a></li>
-                        <li><a href="#soluciones">Lion Package</a></li>
-                        <li><a href="#soluciones">Dragon Package</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Empresa</h4>
-                    <ul>
-                        <li><a href="#inicio">Inicio</a></li>
-                        <li><a href="#soluciones">Soluciones</a></li>
-                        <li><a href="#contacto">Contacto</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Wolf-Byte. Todos los derechos reservados.</p>
-            </div>
+            <p>&copy; 2025 Wolf-Byte. AI Solutions.</p>
         </div>
     </footer>
-
-    <script src="assets/js/main.js"></script>
 </body>
 </html>
