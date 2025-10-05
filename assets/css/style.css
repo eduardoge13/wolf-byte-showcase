@@ -177,6 +177,17 @@ body {
     margin-bottom: 24px;
 }
 
+.package-icon .icon {
+    width: 48px;
+    height: 48px;
+    color: var(--blue);
+    stroke-width: 1.5;
+}
+
+.package-card:hover .package-icon .icon {
+    color: var(--blue-light);
+}
+
 .package-title {
     font-size: 24px;
     font-weight: 600;
