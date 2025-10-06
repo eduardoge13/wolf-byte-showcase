@@ -254,10 +254,19 @@ body {
     margin-bottom: 32px;
 }
 
+.contact-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
 .contact-button {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     padding: 14px 32px;
-    background: var(--blue);
     color: var(--white);
     text-decoration: none;
     border-radius: 8px;
@@ -266,10 +275,36 @@ body {
     transition: all 0.2s ease;
 }
 
-.contact-button:hover {
+.contact-button.primary {
+    background: var(--blue);
+}
+
+.contact-button.primary:hover {
     background: var(--blue-light);
     transform: translateY(-2px);
     box-shadow: 0 8px 24px rgba(74, 144, 226, 0.25);
+}
+
+.contact-button.secondary {
+    background: var(--charcoal);
+}
+
+.contact-button.secondary:hover {
+    background: var(--steel);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(44, 62, 80, 0.25);
+}
+
+.button-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.demo-note {
+    font-size: 14px;
+    color: var(--steel);
+    font-style: italic;
+    margin-top: 16px;
 }
 
 /* ============================================

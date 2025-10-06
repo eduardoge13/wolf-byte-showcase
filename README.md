@@ -1,202 +1,222 @@
-# Wolf-Byte Showcase Site
+# 🐺 Wolf-Byte Showcase
 
-🐺 **El Invierno de los Datos Ha Llegado**
-
-Sitio web estático de presentación para Wolf-Byte, inspirado en Game of Thrones, mostrando soluciones de IA y Ciencia de Datos.
-
-## 🎯 Contenido
-
-El sitio presenta 3 soluciones principales:
-
-### 1. Casa Stark - Análisis de Datos End-to-End
-- Análisis exploratorio profundo
-- Modelos predictivos y proyecciones
-- Dashboards interactivos
-- Optimización de procesos
-
-### 2. Casa Lannister - Chatbots Inteligentes
-- Atención al cliente automatizada
-- Consultas de base de datos
-- Agendamiento automático
-- Integración con WhatsApp/Telegram
-
-### 3. Casa Targaryen - Agentes de IA Conversacional
-- Comprensión de lenguaje natural
-- Personalidad configurable
-- Multilenguaje
-- Integración con sistemas existentes
-
-## 🚀 Deployment en GCP
-
-### Opción 1: Cloud Storage (Sitio Estático) - Recomendado
-
-```bash
-# 1. Crear bucket en GCP
-gsutil mb -p <PROJECT_ID> gs://wolf-byte-showcase
-
-# 2. Configurar bucket para sitio web
-gsutil web set -m index.html -e index.html gs://wolf-byte-showcase
-
-# 3. Hacer bucket público
-gsutil iam ch allUsers:objectViewer gs://wolf-byte-showcase
-
-# 4. Subir archivos
-cd /Users/eduardogaitan/Documents/projects/wolf-byte-showcase
-gsutil -m cp -r * gs://wolf-byte-showcase/
-
-# 5. Acceder al sitio
-echo "https://storage.googleapis.com/wolf-byte-showcase/index.html"
-```
-
-### Opción 2: Cloud Storage + Load Balancer (Dominio Personalizado)
-
-```bash
-# 1. Crear bucket con nombre del dominio
-gsutil mb -p <PROJECT_ID> gs://www.wolf-byte.com
-
-# 2. Configurar bucket
-gsutil web set -m index.html -e index.html gs://www.wolf-byte.com
-
-# 3. Hacer público
-gsutil iam ch allUsers:objectViewer gs://www.wolf-byte.com
-
-# 4. Subir archivos
-gsutil -m cp -r * gs://www.wolf-byte.com/
-
-# 5. Configurar Load Balancer (usar consola GCP)
-# - Backend: bucket de Cloud Storage
-# - Frontend: IP externa
-# - SSL: certificado managed de Google
-
-# 6. Configurar DNS
-# Apuntar dominio a la IP del Load Balancer
-```
-
-### Opción 3: Firebase Hosting (Más Simple)
-
-```bash
-# 1. Instalar Firebase CLI
-npm install -g firebase-tools
-
-# 2. Login
-firebase login
-
-# 3. Inicializar proyecto
-cd /Users/eduardogaitan/Documents/projects/wolf-byte-showcase
-firebase init hosting
-
-# 4. Deploy
-firebase deploy --only hosting
-
-# 5. URL automática
-# https://<project-id>.web.app
-```
-
-## 🛠️ Desarrollo Local
-
-```bash
-# Servidor simple con Python
-cd /Users/eduardogaitan/Documents/projects/wolf-byte-showcase
-python3 -m http.server 8080
-
-# Abrir en navegador
-open http://localhost:8080
-```
+Página web de presentación y bot de demostración para Wolf-Byte - Soluciones de Inteligencia Artificial.
 
 ## 📁 Estructura del Proyecto
 
 ```
 wolf-byte-showcase/
-├── index.html              # Página principal
+├── index.html              # Página web principal
 ├── assets/
-│   ├── css/
-│   │   └── style.css      # Estilos GoT theme
-│   ├── js/
-│   │   └── main.js        # Interactividad
-│   └── img/
-│       └── wolf-logo.svg  # Logo (opcional)
-├── README.md              # Este archivo
-└── deploy.sh              # Script de deployment
+│   ├── css/style.css      # Estilos minimalistas
+│   └── img/               # Logo y recursos visuales
+├── demo_bot.py            # Bot de demostración de Telegram
+├── requirements.txt       # Dependencias de Python
+├── .env                   # Variables de entorno (NO subir a GitHub)
+└── README.md             # Este archivo
 ```
 
-## 🎨 Características
+## 🌐 Sitio Web
 
-- ✅ **Diseño Responsivo** - Funciona en móvil, tablet y desktop
-- ✅ **Tema Game of Thrones** - Colores, tipografía y estilo medieval
-- ✅ **Animaciones** - Efectos de scroll y transiciones suaves
-- ✅ **Formulario de Contacto** - Captura de leads
-- ✅ **Demos Interactivos** - Simulaciones de cada solución
-- ✅ **SEO Optimizado** - Meta tags y estructura semántica
-- ✅ **Performance** - Sitio estático ultra rápido
+**URL:** https://eduardoge13.github.io/wolf-byte-showcase/
 
-## 🎯 Personalización
+### Características:
+- ✨ Diseño minimalista con tema blanco/invierno
+- 🎨 Logo estilizado con contenedor asimétrico
+- 📱 Totalmente responsive
+- 🔤 100% en español
+- �� 3 paquetes de servicios destacados
 
-### Cambiar Información de Contacto
+### Paquetes:
+1. **🐺 Paquete Lobo** - Análisis de Datos e Inteligencia de Negocios
+2. **🦁 Paquete León** - Asistentes Virtuales Multicanal
+3. **🐉 Paquete Dragón** - Agentes de IA Avanzados
 
-Editar en `index.html` líneas 580-600:
+## 🤖 Bot de Demostración
 
-```html
-<div class="info-card">
-    <div class="info-icon">📧</div>
-    <h4>Email</h4>
-    <p>tu-email@wolf-byte.com</p>
-</div>
-```
+El bot muestra ejemplos interactivos de diferentes tipos de bots que se pueden crear.
 
-### Agregar Logo
+### Comandos disponibles:
+- `/start` - Menú principal con botones interactivos
+- `/demo_datos` - Ejemplo de bot de análisis de datos
+- `/demo_asistente` - Ejemplo de asistente virtual
+- `/demo_ia` - Ejemplo de agente de IA
+- `/ejemplos` - Casos de uso reales
+- `/info` - Información sobre Wolf-Byte
 
-1. Guardar logo como `assets/img/wolf-logo.svg`
-2. El HTML ya tiene el elemento configurado
+## 🚀 Configuración Rápida
 
-### Modificar Colores
-
-Editar en `assets/css/style.css` líneas 1-20:
-
-```css
-:root {
-    --lannister-gold: #d4af37;
-    --ice-blue: #74b9ff;
-    /* etc... */
-}
-```
-
-## 🔗 URLs Útiles
-
-- **GCP Console**: https://console.cloud.google.com
-- **Cloud Storage**: https://console.cloud.google.com/storage
-- **Firebase Console**: https://console.firebase.google.com
-
-## 📊 Analytics (Opcional)
-
-Agregar Google Analytics en `index.html` antes de `</head>`:
-
-```html
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-XXXXXXXXXX');
-</script>
-```
-
-## 🚀 Quick Deploy
+### 1. Crear Bot en Telegram
 
 ```bash
-# Ejecutar script de deployment automático
-chmod +x deploy.sh
-./deploy.sh
+# 1. Buscar @BotFather en Telegram
+# 2. Ejecutar: /newbot
+# 3. Seguir instrucciones y guardar el TOKEN
 ```
 
-## 📞 Soporte
+### 2. Configurar Variables de Entorno
 
-Para preguntas o soporte, contacta a:
-- Email: contacto@wolf-byte.com
-- Telegram: @WolfByteBot
+Crear archivo `.env`:
 
----
+```bash
+DEMO_BOT_TOKEN=tu_token_de_botfather
+```
 
-**"El Norte Recuerda... Tus Datos"**
+### 3. Instalar Dependencias
 
-*Wolf-Byte © 2025*
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Ejecutar Bot Localmente
+
+```bash
+python demo_bot.py
+```
+
+### 5. Actualizar Link en la Página
+
+En `index.html`, buscar y reemplazar:
+
+```html
+<!-- Antes -->
+<a href="#" id="telegram-bot-link" ... style="opacity: 0.6;">
+    Próximamente: Bot de Demo
+</a>
+
+<!-- Después -->
+<a href="https://t.me/TU_BOT_USERNAME" target="_blank" class="contact-button primary">
+    <i data-lucide="message-circle" class="button-icon"></i>
+    Probar Bot en Telegram
+</a>
+```
+
+## ☁️ Despliegue en Google Cloud Run
+
+### Prerrequisitos:
+- Cuenta de Google Cloud Platform
+- gcloud CLI instalado
+- Proyecto GCP creado
+
+### Pasos:
+
+1. **Crear Dockerfile** (ya existe en el proyecto principal):
+
+```dockerfile
+FROM python:3.11-slim
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+COPY demo_bot.py .
+CMD ["python", "demo_bot.py"]
+```
+
+2. **Configurar Secret Manager**:
+
+```bash
+# Guardar el token en Secret Manager
+echo -n "TU_TOKEN_AQUI" | gcloud secrets create demo-bot-token --data-file=-
+
+# Dar permisos a Cloud Run
+gcloud secrets add-iam-policy-binding demo-bot-token \
+    --member="serviceAccount:PROJECT_NUMBER-compute@developer.gserviceaccount.com" \
+    --role="roles/secretmanager.secretAccessor"
+```
+
+3. **Deploy a Cloud Run**:
+
+```bash
+# Build y deploy
+gcloud run deploy wolf-byte-demo-bot \
+    --source . \
+    --platform managed \
+    --region us-central1 \
+    --allow-unauthenticated \
+    --set-secrets=DEMO_BOT_TOKEN=demo-bot-token:latest \
+    --memory 512Mi \
+    --timeout 300
+```
+
+4. **Verificar**:
+
+```bash
+# El bot debería estar corriendo 24/7
+# Pruébalo en Telegram con /start
+```
+
+## 📊 Arquitectura
+
+```
+┌─────────────────────────────────────┐
+│  GitHub Pages                        │
+│  (Sitio Web Estático)               │
+│  https://eduardoge13.github.io/...  │
+└──────────────┬──────────────────────┘
+               │
+               │ Link al bot
+               ▼
+┌─────────────────────────────────────┐
+│  Telegram                            │
+│  (Mensajería)                        │
+└──────────────┬──────────────────────┘
+               │
+               │ Webhook/Polling
+               ▼
+┌─────────────────────────────────────┐
+│  Google Cloud Run                    │
+│  (Bot Python 24/7)                   │
+│  - demo_bot.py                       │
+│  - Secret Manager (token)            │
+└─────────────────────────────────────┘
+```
+
+## 🔒 Seguridad
+
+### Archivos que NUNCA se suben a GitHub:
+- `.env` - Variables de entorno locales
+- `credentials.json` - Credenciales de servicios
+- `*token*.txt` - Tokens de APIs
+
+Estos archivos están en `.gitignore`.
+
+### Para producción:
+- Usar **Google Secret Manager** para tokens
+- Activar **Cloud Armor** para protección DDoS
+- Configurar **alertas de monitoreo**
+
+## 🛠️ Desarrollo
+
+### Modificar la página web:
+```bash
+# Editar index.html o assets/css/style.css
+git add .
+git commit -m "Actualizar diseño"
+git push origin main
+# GitHub Pages se actualiza automáticamente
+```
+
+### Modificar el bot:
+```bash
+# Editar demo_bot.py
+python demo_bot.py  # Probar localmente
+# Luego desplegar a Cloud Run
+```
+
+## 📝 To-Do
+
+- [ ] Crear bot en Telegram con @BotFather
+- [ ] Configurar .env con token
+- [ ] Probar bot localmente
+- [ ] Desplegar bot a Google Cloud Run
+- [ ] Actualizar link en index.html
+- [ ] Agregar analytics a la página
+- [ ] Configurar dominio personalizado
+
+## 📧 Contacto
+
+- **Email:** contacto@wolf-byte.com
+- **Sitio Web:** https://eduardoge13.github.io/wolf-byte-showcase/
+
+## 📄 Licencia
+
+Proyecto privado - Wolf-Byte © 2025
