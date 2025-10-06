@@ -265,14 +265,21 @@ body {
 .contact-button {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    padding: 14px 32px;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px 36px;
     color: var(--white);
     text-decoration: none;
     border-radius: 8px;
     font-weight: 500;
     font-size: 15px;
     transition: all 0.2s ease;
+    min-width: 220px;
+}
+
+.contact-button span {
+    display: inline-block;
+    line-height: 1;
 }
 
 .contact-button.primary {
@@ -298,6 +305,10 @@ body {
 .button-icon {
     width: 20px;
     height: 20px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .demo-note {
@@ -361,5 +372,15 @@ body {
     
     .contact {
         padding: 80px 0;
+    }
+    
+    .contact-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contact-button {
+        width: 100%;
+        max-width: 300px;
     }
 }
