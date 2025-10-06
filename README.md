@@ -1,6 +1,6 @@
 # 🐺 Wolf-Byte Showcase
 
-Página web de presentación y bot de demostración para Wolf-Byte - Soluciones de Inteligencia Artificial.
+Página web de presentación y bot de demostración para Wolf-Byte - Soluciones de Inteligencia Artificial v1.0.
 
 ## 📁 Estructura del Proyecto
 
@@ -12,7 +12,7 @@ wolf-byte-showcase/
 │   └── img/               # Logo y recursos visuales
 ├── demo_bot.py            # Bot de demostración de Telegram
 ├── requirements.txt       # Dependencias de Python
-├── .env                   # Variables de entorno (NO subir a GitHub)
+├── .env                   # Variables de entorno
 └── README.md             # Este archivo
 ```
 
@@ -21,16 +21,16 @@ wolf-byte-showcase/
 **URL:** https://eduardoge13.github.io/wolf-byte-showcase/
 
 ### Características:
-- ✨ Diseño minimalista con tema blanco/invierno
-- 🎨 Logo estilizado con contenedor asimétrico
-- 📱 Totalmente responsive
-- 🔤 100% en español
-- �� 3 paquetes de servicios destacados
+- Diseño minimalista con tema blanco/invierno
+- Logo estilizado con contenedor asimétrico
+- Totalmente responsive
+- 100% en español
+- 3 paquetes de servicios destacados
 
 ### Paquetes:
-1. **🐺 Paquete Lobo** - Análisis de Datos e Inteligencia de Negocios
-2. **🦁 Paquete León** - Asistentes Virtuales Multicanal
-3. **🐉 Paquete Dragón** - Agentes de IA Avanzados
+1. **Paquete Lobo** - Análisis de Datos e Inteligencia de Negocios
+2. **Paquete León** - Asistentes Virtuales Multicanal
+3. **Paquete Dragón** - Agentes de IA Avanzados
 
 ## 🤖 Bot de Demostración
 
@@ -44,7 +44,7 @@ El bot muestra ejemplos interactivos de diferentes tipos de bots que se pueden c
 - `/ejemplos` - Casos de uso reales
 - `/info` - Información sobre Wolf-Byte
 
-## 🚀 Configuración Rápida
+##  Configuración Rápida
 
 ### 1. Crear Bot en Telegram
 
@@ -91,7 +91,7 @@ En `index.html`, buscar y reemplazar:
 </a>
 ```
 
-## ☁️ Despliegue en Google Cloud Run
+## Despliegue en Google Cloud Run
 
 ### Prerrequisitos:
 - Cuenta de Google Cloud Platform
@@ -144,11 +144,11 @@ gcloud run deploy wolf-byte-demo-bot \
 # Pruébalo en Telegram con /start
 ```
 
-## 📊 Arquitectura
+## Arquitectura
 
 ```
 ┌─────────────────────────────────────┐
-│  GitHub Pages                        │
+│  GitHub Pages                       │
 │  (Sitio Web Estático)               │
 │  https://eduardoge13.github.io/...  │
 └──────────────┬──────────────────────┘
@@ -156,57 +156,27 @@ gcloud run deploy wolf-byte-demo-bot \
                │ Link al bot
                ▼
 ┌─────────────────────────────────────┐
-│  Telegram                            │
-│  (Mensajería)                        │
+│  Telegram                           │
+│  (Mensajería)                       │
 └──────────────┬──────────────────────┘
                │
                │ Webhook/Polling
                ▼
 ┌─────────────────────────────────────┐
-│  Google Cloud Run                    │
-│  (Bot Python 24/7)                   │
-│  - demo_bot.py                       │
-│  - Secret Manager (token)            │
+│  Google Cloud Run                   │
+│  (Bot Python 24/7)                  │
+│  - demo_bot.py                      │
+│  - Secret Manager (token)           │
 └─────────────────────────────────────┘
 ```
-
-## 🔒 Seguridad
-
-### Archivos que NUNCA se suben a GitHub:
-- `.env` - Variables de entorno locales
-- `credentials.json` - Credenciales de servicios
-- `*token*.txt` - Tokens de APIs
-
-Estos archivos están en `.gitignore`.
-
 ### Para producción:
 - Usar **Google Secret Manager** para tokens
 - Activar **Cloud Armor** para protección DDoS
 - Configurar **alertas de monitoreo**
 
-## 🛠️ Desarrollo
 
-### Modificar la página web:
-```bash
-# Editar index.html o assets/css/style.css
-git add .
-git commit -m "Actualizar diseño"
-git push origin main
-# GitHub Pages se actualiza automáticamente
-```
+## 📝 Proximamente version 2.0
 
-### Modificar el bot:
-```bash
-# Editar demo_bot.py
-python demo_bot.py  # Probar localmente
-# Luego desplegar a Cloud Run
-```
-
-## 📝 To-Do
-
-- [ ] Crear bot en Telegram con @BotFather
-- [ ] Configurar .env con token
-- [ ] Probar bot localmente
 - [ ] Desplegar bot a Google Cloud Run
 - [ ] Actualizar link en index.html
 - [ ] Agregar analytics a la página
@@ -214,7 +184,7 @@ python demo_bot.py  # Probar localmente
 
 ## 📧 Contacto
 
-- **Email:** contacto@wolf-byte.com
+- **Email:** eduardo.gaitan.es@gmail.com
 - **Sitio Web:** https://eduardoge13.github.io/wolf-byte-showcase/
 
 ## 📄 Licencia
